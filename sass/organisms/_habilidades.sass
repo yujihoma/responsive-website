@@ -1,0 +1,29 @@
+.habilidades
+  +clearfix
+  +make-sm-column(6)
+  +make-sm-column-offset(3)
+  margin: 30px auto 50px
+  
+  .habilidades-x
+    text-align: center
+    +breakpoint($tablet)
+      margin-top: 30px
+  
+  li
+    +make-sm-column(6)
+
+    h2
+      margin-top: 0
+      font-size: 30px
+      +breakpoint($tablet)
+        font-size: 25px
+    i
+      font-size: 100px
+      +breakpoint($tablet)
+        font-size: 80px
+        
+      &.fa-html5
+        color: $laranja-html5
+        
+      &.fa-css3
+        color: $azul-css
