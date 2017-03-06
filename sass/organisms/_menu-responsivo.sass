@@ -1,0 +1,83 @@
+body
+    position: relative
+    &.ativo
+        overflow: inherit
+
+.responsive-menu
+    z-index: 1
+    +clearfix
+    +transition(.2s)
+    position: fixed
+    width: 100%
+    height: 160px
+    top: -160px
+    background-color: $azul
+    
+    &.ativo
+        top: 0
+    
+    ul
+        li
+            border-bottom: 1px solid $branco
+            text-align: center
+            text-transform: uppercase
+            a
+                padding: 10px
+                display: block
+                color: $branco
+                
+                &:hover,
+                &:focus
+                    background-color: rgba($preto, .4)
+    
+.layout
+    +transition(.2s)
+    &.ativo
+        +transition(.2s)
+        padding-top: 160px
+            
+.toggle
+    
+    width: 30px
+    height: 30px
+    float: right
+    position: relative
+    overflow: hidden
+    margin-left: 15px
+    display: none
+    
+    +breakpoint($tablet)
+        display: block
+    
+    &:hover
+        span
+            &:nth-child(1)
+                top: 4px
+            &:nth-child(3)
+                top: 18px
+    &.ativo
+        span:nth-child(1)
+            top: 11px
+            +rotate(45deg)
+        span:nth-child(3)
+            top: 11px 
+            +rotate(-45deg)
+        span:nth-child(2)
+            display: none
+    
+    span
+        width: 100%
+        height: 2px
+        content: ""
+        display: block
+        background-color: $branco
+        position: absolute
+        left: 0
+        +transition(.2s)
+            
+        &:nth-child(1)
+            top: 2px
+        &:nth-child(2)
+            top: 11px
+        &:nth-child(3)
+            top: 20px

@@ -11,85 +11,117 @@
 </head>
 
 <body>
+    
+    <!-- Menu responsivo -->
+    <nav class="responsive-menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+    <!-- Menu responsivo -->
+    
+    <div class="layout">
+        <!-- Header -->
+        <header>
 
-    <!-- Header -->
-    <header>
-
-        <div class="container">
-            <div class="logo">
-                <img src="images/Logo%20Topo.svg" alt="Logo Topo Tag">
-            </div>
-
-            <div class="links">
-                <!-- Menu -->
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="portfolio.html">Portfólio</a></li>
-                        <li><a href="contato.html">Contato</a></li>
-                    </ul>
-                </nav>
-
-                <ul class="social">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href=""><i class="fa fa-github-alt"></i></a></li>
-                </ul>
-            </div>
-            <h1><strong>Henrique Yuji</strong> H. H. <strong>Ferreira</strong></h1>
-        </div>
-    </header>
-    <!-- Final Header -->
-
-    <!-- Main -->
-    <main>
-        <section class="sobre">
             <div class="container">
-                <div class="itens">
-                    <div class="imagem">
-                        <img src="images/icon-img_03.png" alt="Foto Tag">
-                    </div>
-
-                    <div class="icone-lapis">
-                        <i class="fa fa-pencil"></i>
-                    </div>
-
-                    <div class="icone-codigo">
-                        <i class="fa fa-code"></i>
-                    </div>
-
-                    <div class="icone-comentar">
-                        <i class="fa fa-comments"></i>
-                    </div>
-
-                    <div class="icone-compartilhar">
-                        <i class="fa fa-share-alt"></i>
-                    </div>
-
+                <div class="logo">
+                    <img src="images/Logo%20Topo.svg" alt="Logo Topo Tag">
                 </div>
-                
-                <div class="textos">
-                    <p><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</strong> Voluptatum ducimus, dicta perferendis a modi neque quisquam consequatur tempora alias natus voluptatem temporibus iure obcaecati, mollitia tenetur. Eius temporibus excepturi porro, maiores! In explicabo quae voluptatibus voluptates ut aliquid non laboriosam dignissimos tenetur quo.</p>
-                
 
-                    <a href="#" class="botao medio">Continue Lendo</a>
+                <div class="links">
+                    <!-- Menu -->
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="sobre.html">Sobre</a></li>
+                            <li><a href="portfolio.html">Portfólio</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <a class="toggle" href="javascript:;">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa fa-github-alt"></i></a></li>
+                    </ul>
                 </div>
+                <h1><strong>Henrique Yuji</strong> H. H. <strong>Ferreira</strong></h1>
             </div>
-        </section>
-    </main>
-    <!-- Final Main -->
+        </header>
+        <!-- Final Header -->
 
-    <!-- Footer -->
-    <footer>
-        <div class="logo-footer">
-            <a href="index.html">
-                <img src="images/logo-footer.svg" alt="">
-            </a>
+        <!-- Main -->
+        <main>
+            <section class="sobre">
+                <div class="container">
+                    <div class="itens">
+                        <div class="imagem">
+                            <img src="images/icon-img_03.png" alt="Foto Tag">
+                        </div>
 
-            <p>2016 Todos os Direitos Reservados</p>
-        </div>
-    </footer>
-    <!-- Final Footer -->
+                        <div class="icone-lapis">
+                            <i class="fa fa-pencil"></i>
+                        </div>
+
+                        <div class="icone-codigo">
+                            <i class="fa fa-code"></i>
+                        </div>
+
+                        <div class="icone-comentar">
+                            <i class="fa fa-comments"></i>
+                        </div>
+
+                        <div class="icone-compartilhar">
+                            <i class="fa fa-share-alt"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="textos">
+                        <p><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</strong> Voluptatum ducimus, dicta perferendis a modi neque quisquam consequatur tempora alias natus voluptatem temporibus iure obcaecati, mollitia tenetur. Eius temporibus excepturi porro, maiores! In explicabo quae voluptatibus voluptates ut aliquid non laboriosam dignissimos tenetur quo.</p>
+
+
+                        <a href="sobre.html" class="botao medio">Continue Lendo</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Final Main -->
+
+        <!-- Footer -->
+        <footer>
+            <div class="logo-footer">
+                <a href="index.html">
+                    <img src="images/logo-footer.svg" alt="">
+                </a>
+
+                <p>2016 Todos os Direitos Reservados</p>
+            </div>
+        </footer>
+        <!-- Final Footer -->
+    </div>
+    
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(function() {   
+            $('.toggle').click(function(){
+                
+                $('.layout').toggleClass('ativo');
+                $('.responsive-menu').toggleClass('ativo');
+                $('body').toggleClass('ativo');
+                $(this).toggleClass('ativo');
+            });
+        });
+    </script>
 
 </body>
 
