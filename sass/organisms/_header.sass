@@ -38,10 +38,23 @@ header
             ul
                 li
                     display: inline-block
+                    margin: 0 20px 0 0
                     a
                         color: $branco
                         text-transform: uppercase
-                        margin-right: 25px
+                        
+                        &:hover
+                            &:after
+                                width: 100%
+                        
+                        &:after
+                            content: ""
+                            display: table
+                            margin: 5px auto 0
+                            width: 0%
+                            height: 2px
+                            background-color: $branco
+                            +transition(.3s)
         .social
             li
                 display: inline-block

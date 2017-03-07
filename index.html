@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="css/geral.css">
     <link rel="stylesheet" href="css/plugins.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="bower_components/wowjs/css/libs/animate.css">
 </head>
 
 <body>
-    
+
     <!-- Menu responsivo -->
     <nav class="responsive-menu">
         <ul>
@@ -22,19 +23,21 @@
         </ul>
     </nav>
     <!-- Menu responsivo -->
-    
+
     <div class="layout">
         <!-- Header -->
         <header>
 
             <div class="container">
-                <div class="logo">
-                    <img src="images/Logo%20Topo.svg" alt="Logo Topo Tag">
+                <div class="logo wow fadeInLeft" data-wow-duration="1s">
+                    <a href="index.html">
+                        <img src="images/Logo%20Topo.svg" alt="Logo Topo Tag">
+                    </a>
                 </div>
 
                 <div class="links">
                     <!-- Menu -->
-                    <nav>
+                    <nav class="wow fadeInDown" data-wow-duration="1s" data-wow-delay=".3s">
                         <ul>
                             <li><a href="index.html">Inicio</a></li>
                             <li><a href="sobre.html">Sobre</a></li>
@@ -42,19 +45,19 @@
                             <li><a href="contato.html">Contato</a></li>
                         </ul>
                     </nav>
-                    
+
                     <a class="toggle" href="javascript:;">
                         <span></span>
                         <span></span>
                         <span></span>
                     </a>
 
-                    <ul class="social">
+                    <ul class="social wow fadeInDown" data-wow-duration="1s" data-wow-delay=".3s">
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li><a href=""><i class="fa fa-github-alt"></i></a></li>
                     </ul>
                 </div>
-                <h1><strong>Henrique Yuji</strong> H. H. <strong>Ferreira</strong></h1>
+                <h1 class="wow fadeInDown" data-wow-duration="1s"><strong>Henrique Yuji</strong> H. H. <strong>Ferreira</strong></h1>
             </div>
         </header>
         <!-- Final Header -->
@@ -64,23 +67,23 @@
             <section class="sobre">
                 <div class="container">
                     <div class="itens">
-                        <div class="imagem">
+                        <div class="imagem wow fadeInDown" data-wow-duration="1s">
                             <img src="images/icon-img_03.png" alt="Foto Tag">
                         </div>
 
-                        <div class="icone-lapis">
+                        <div class="icone-lapis wow fadeInLeft" data-wow-duration=".6s" data-wow-delay=".6s">
                             <i class="fa fa-pencil"></i>
                         </div>
 
-                        <div class="icone-codigo">
+                        <div class="icone-codigo wow fadeInLeft" data-wow-duration=".6s" data-wow-delay=".3s">
                             <i class="fa fa-code"></i>
                         </div>
 
-                        <div class="icone-comentar">
+                        <div class="icone-comentar wow fadeInRight" data-wow-duration=".6s" data-wow-delay=".3s">
                             <i class="fa fa-comments"></i>
                         </div>
 
-                        <div class="icone-compartilhar">
+                        <div class="icone-compartilhar wow fadeInRight" data-wow-duration=".6s" data-wow-delay=".6s">
                             <i class="fa fa-share-alt"></i>
                         </div>
 
@@ -109,17 +112,20 @@
         </footer>
         <!-- Final Footer -->
     </div>
-    
+
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/wowjs/dist/wow.min.js"></script>
     <script>
-        $(function() {   
-            $('.toggle').click(function(){
-                
+        $(function () {
+            $('.toggle').click(function () {
+
                 $('.layout').toggleClass('ativo');
                 $('.responsive-menu').toggleClass('ativo');
                 $('body').toggleClass('ativo');
                 $(this).toggleClass('ativo');
             });
+
+            new WOW().init();
         });
     </script>
 

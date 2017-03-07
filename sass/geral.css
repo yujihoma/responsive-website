@@ -148,16 +148,31 @@ header {
         display: none; } }
     /* line 39, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_header.sass */
     header .links nav ul li {
-      display: inline-block; }
-      /* line 41, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_header.sass */
+      display: inline-block;
+      margin: 0 20px 0 0; }
+      /* line 42, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_header.sass */
       header .links nav ul li a {
         color: white;
-        text-transform: uppercase;
-        margin-right: 25px; }
-    /* line 46, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_header.sass */
+        text-transform: uppercase; }
+        /* line 47, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_header.sass */
+        header .links nav ul li a:hover:after {
+          width: 100%; }
+        /* line 50, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_header.sass */
+        header .links nav ul li a:after {
+          content: "";
+          display: table;
+          margin: 5px auto 0;
+          width: 0%;
+          height: 2px;
+          background-color: white;
+          -moz-transition: all 0.3s linear;
+          -o-transition: all 0.3s linear;
+          -webkit-transition: all 0.3s linear;
+          transition: all 0.3s linear; }
+    /* line 59, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_header.sass */
     header .links .social li {
       display: inline-block; }
-      /* line 48, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_header.sass */
+      /* line 61, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_header.sass */
       header .links .social li a {
         margin: 0 5px 0 0;
         color: white;
@@ -171,7 +186,7 @@ header {
         -moz-border-radius: 120px;
         -ms-border-radius: 120px;
         border-radius: 120px; }
-  /* line 58, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_header.sass */
+  /* line 71, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_header.sass */
   header h1 {
     clear: both;
     margin: 190px auto 30px auto !important;
@@ -180,18 +195,18 @@ header {
     padding: 20px 32px 20px 32px;
     text-align: center; }
     @media (max-width: 991px) {
-      /* line 58, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_header.sass */
+      /* line 71, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_header.sass */
       header h1 {
         padding: 20px 30px 20px 30px;
         font-size: 35px;
         font-size: 2.1875rem; } }
     @media (max-width: 440px) {
-      /* line 58, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_header.sass */
+      /* line 71, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_header.sass */
       header h1 {
         padding: 20px 29px 20px 29px;
         font-size: 25px;
         font-size: 1.5625rem; } }
-  /* line 74, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_header.sass */
+  /* line 87, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_header.sass */
   header h1,
   header p {
     color: #000;
@@ -213,5 +228,123 @@ footer {
     height: 110px;
     display: block;
     margin: 35px auto; }
+
+/* line 1, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_menu-responsivo.sass */
+body {
+  position: relative; }
+  /* line 3, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_menu-responsivo.sass */
+  body.ativo {
+    overflow: inherit; }
+
+/* line 6, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_menu-responsivo.sass */
+.responsive-menu {
+  z-index: 1;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  position: fixed;
+  width: 100%;
+  height: 160px;
+  top: -160px;
+  background-color: #31b1e7;
+  display: none; }
+  /* line 14, C:/Users/Yuji/Documents/Layout Site Portfólio/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .responsive-menu:before, .responsive-menu:after {
+    content: " ";
+    display: table; }
+  /* line 19, C:/Users/Yuji/Documents/Layout Site Portfólio/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .responsive-menu:after {
+    clear: both; }
+  /* line 17, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_menu-responsivo.sass */
+  .responsive-menu.ativo {
+    top: 0;
+    display: block; }
+  /* line 22, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_menu-responsivo.sass */
+  .responsive-menu ul li {
+    border-bottom: 1px solid white;
+    text-align: center;
+    text-transform: uppercase; }
+    /* line 26, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_menu-responsivo.sass */
+    .responsive-menu ul li a {
+      padding: 10px;
+      display: block;
+      color: white; }
+      /* line 31, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_menu-responsivo.sass */
+      .responsive-menu ul li a:hover, .responsive-menu ul li a:focus {
+        background-color: rgba(0, 0, 0, 0.4); }
+
+/* line 35, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_menu-responsivo.sass */
+.layout {
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear; }
+  /* line 37, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_menu-responsivo.sass */
+  .layout.ativo {
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    padding-top: 160px; }
+
+/* line 41, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_menu-responsivo.sass */
+.toggle {
+  width: 30px;
+  height: 30px;
+  float: right;
+  position: relative;
+  overflow: hidden;
+  margin-left: 15px;
+  display: none; }
+  @media (max-width: 991px) {
+    /* line 41, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_menu-responsivo.sass */
+    .toggle {
+      display: block; } }
+  /* line 56, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_menu-responsivo.sass */
+  .toggle:hover span:nth-child(1) {
+    top: 4px; }
+  /* line 58, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_menu-responsivo.sass */
+  .toggle:hover span:nth-child(3) {
+    top: 18px; }
+  /* line 61, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_menu-responsivo.sass */
+  .toggle.ativo span:nth-child(1) {
+    top: 11px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  /* line 64, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_menu-responsivo.sass */
+  .toggle.ativo span:nth-child(3) {
+    top: 11px;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  /* line 67, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_menu-responsivo.sass */
+  .toggle.ativo span:nth-child(2) {
+    display: none; }
+  /* line 70, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_menu-responsivo.sass */
+  .toggle span {
+    width: 100%;
+    height: 2px;
+    content: "";
+    display: block;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear; }
+    /* line 80, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_menu-responsivo.sass */
+    .toggle span:nth-child(1) {
+      top: 2px; }
+    /* line 82, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_menu-responsivo.sass */
+    .toggle span:nth-child(2) {
+      top: 11px; }
+    /* line 84, C:/Users/Yuji/Documents/Layout Site Portfólio/sass/organisms/_menu-responsivo.sass */
+    .toggle span:nth-child(3) {
+      top: 20px; }
 
 /*# sourceMappingURL=geral.css.map */
